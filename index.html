@@ -1,74 +1,145 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Regio Automotriz - Taller Mecánico</title>
+<title>Regio Automotriz | Taller Mecánico en San Pedro</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body {
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* NAVBAR */
-nav {
-  background: #111;
+body {
+  background: #0f172a;
   color: white;
-  padding: 15px;
-  text-align: center;
 }
 
 /* HERO */
 .hero {
-  background: url('https://images.unsplash.com/photo-1515923162037-5cfa3d0c0c2c') center/cover;
-  color: white;
+  height: 90vh;
+  background: url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 80px 20px;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {
-  font-size: 40px;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.hero p {
+  margin: 15px 0;
+  font-size: 18px;
+  color: #cbd5e1;
 }
 
 .btn {
-  background: #e63946;
-  color: white;
+  display: inline-block;
   padding: 15px 25px;
-  border: none;
+  background: #ef4444;
+  color: white;
+  border-radius: 10px;
   margin-top: 20px;
-  cursor: pointer;
-  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #dc2626;
 }
 
 /* SECTIONS */
 section {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
+  padding: 60px 10%;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* SERVICES */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
 .card {
-  background: white;
+  background: #1e293b;
   padding: 20px;
-  margin: 10px 0;
-  border-radius: 10px;
+  border-radius: 15px;
+  transition: 0.3s;
 }
 
-/* GRID */
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+.card:hover {
+  transform: translateY(-5px);
+  background: #334155;
+}
+
+/* ABOUT */
+.about {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.about img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+}
+
+/* CONTACT */
+.contact {
+  background: #111827;
+  padding: 40px;
+  border-radius: 15px;
 }
 
 /* FOOTER */
 footer {
-  background: #111;
-  color: white;
   text-align: center;
   padding: 20px;
+  background: #020617;
+  color: #94a3b8;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
 }
 </style>
 
@@ -76,55 +147,56 @@ footer {
 
 <body>
 
-<nav>
-  <h2>Regio Automotriz</h2>
-</nav>
-
+<!-- HERO -->
 <div class="hero">
-  <h1>Taller Mecánico en San Pedro</h1>
-  <p>Servicio confiable para tu automóvil</p>
-  <button class="btn" onclick="window.location.href='tel:+528112110188'">Llamar ahora</button>
+  <div class="hero-content">
+    <h1>Regio Automotriz</h1>
+    <p>Taller mecánico profesional en San Pedro Garza García</p>
+    <a class="btn" href="tel:+528112110188">📞 Llamar ahora</a>
+  </div>
 </div>
 
+<!-- SERVICIOS -->
 <section>
   <h2>Servicios</h2>
-  <div class="services">
-    <div class="card">Afinación de motor</div>
-    <div class="card">Cambio de aceite</div>
-    <div class="card">Diagnóstico automotriz</div>
-    <div class="card">Frenos y suspensión</div>
-    <div class="card">Reparaciones generales</div>
+  <div class="grid">
+    <div class="card">🔧 Afinación de motor</div>
+    <div class="card">🛢 Cambio de aceite</div>
+    <div class="card">🚗 Diagnóstico computarizado</div>
+    <div class="card">🛞 Frenos y suspensión</div>
+    <div class="card">⚙ Reparación general</div>
   </div>
 </section>
 
-<section>
-  <h2>Sobre Nosotros</h2>
-  <div class="card">
-    <p>En Regio Automotriz ofrecemos servicio mecánico profesional en San Pedro Garza García. Contamos con técnicos capacitados y atención confiable para mantener tu vehículo en óptimas condiciones.</p>
+<!-- ABOUT -->
+<section class="about">
+  <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04">
+  <div>
+    <h2>Sobre Nosotros</h2>
+    <p>
+      En Regio Automotriz ofrecemos servicio mecánico confiable, rápido y profesional.
+      Nos enfocamos en mantener tu vehículo en óptimas condiciones con técnicos capacitados
+      y atención personalizada.
+    </p>
   </div>
 </section>
 
-<section>
-  <h2>Ubicación</h2>
-  <div class="card">
-    <p>📍 Av. José Vasconcelos 817, Casco Urbano, San Pedro Garza García</p>
-    <iframe 
-      src="https://www.google.com/maps?q=Av.+José+Vasconcelos+817+San+Pedro&output=embed"
-      width="100%" height="250" style="border:0;"></iframe>
-  </div>
-</section>
-
+<!-- CONTACTO -->
 <section>
   <h2>Contacto</h2>
-  <div class="card">
+  <div class="contact">
+    <p>📍 Av. José Vasconcelos 817, San Pedro Garza García</p>
     <p>📞 81 1211 0188</p>
-    <p>Horario: 9:00 AM - 7:00 PM</p>
+    <p>⏰ Abierto de 9:00 AM a 7:00 PM</p>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Regio Automotriz</p>
+  © 2026 Regio Automotriz - Todos los derechos reservados
 </footer>
+
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/528112110188">💬</a>
 
 </body>
 </html>
