@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regio Automotriz - Taller Mecánico</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+/* NAVBAR */
+nav {
+  background: #111;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+/* HERO */
+.hero {
+  background: url('https://images.unsplash.com/photo-1515923162037-5cfa3d0c0c2c') center/cover;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+.btn {
+  background: #e63946;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* SECTIONS */
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+/* GRID */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+  <h2>Regio Automotriz</h2>
+</nav>
+
+<div class="hero">
+  <h1>Taller Mecánico en San Pedro</h1>
+  <p>Servicio confiable para tu automóvil</p>
+  <button class="btn" onclick="window.location.href='tel:+528112110188'">Llamar ahora</button>
+</div>
+
+<section>
+  <h2>Servicios</h2>
+  <div class="services">
+    <div class="card">Afinación de motor</div>
+    <div class="card">Cambio de aceite</div>
+    <div class="card">Diagnóstico automotriz</div>
+    <div class="card">Frenos y suspensión</div>
+    <div class="card">Reparaciones generales</div>
+  </div>
+</section>
+
+<section>
+  <h2>Sobre Nosotros</h2>
+  <div class="card">
+    <p>En Regio Automotriz ofrecemos servicio mecánico profesional en San Pedro Garza García. Contamos con técnicos capacitados y atención confiable para mantener tu vehículo en óptimas condiciones.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Ubicación</h2>
+  <div class="card">
+    <p>📍 Av. José Vasconcelos 817, Casco Urbano, San Pedro Garza García</p>
+    <iframe 
+      src="https://www.google.com/maps?q=Av.+José+Vasconcelos+817+San+Pedro&output=embed"
+      width="100%" height="250" style="border:0;"></iframe>
+  </div>
+</section>
+
+<section>
+  <h2>Contacto</h2>
+  <div class="card">
+    <p>📞 81 1211 0188</p>
+    <p>Horario: 9:00 AM - 7:00 PM</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Regio Automotriz</p>
+</footer>
+
+</body>
+</html>
